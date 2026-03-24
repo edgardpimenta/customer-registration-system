@@ -1,1 +1,9 @@
-﻿//Program.cs Limpa para execução de Cadastro de Clientes.
+﻿using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+    }
+}

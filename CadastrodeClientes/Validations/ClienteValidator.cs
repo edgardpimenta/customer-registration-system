@@ -15,21 +15,21 @@ namespace CadastrodeClientes.Validations
 
             if (string.IsNullOrWhiteSpace(cpf) || cpf.Length < 11)
             {
-                throw new Exception("CPF não pode ser nulo, e não pode ser maior que 11 digitos.");
+                throw new ArgumentException("CPF não pode ser nulo,não pode ser diferente de 11 dígitos.");
             }
 
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(email) || !email.Contains("@"))
             {
-                throw new Exception("Email não pode ser nulo.");
+                throw new ArgumentException("Email não pode ser nulo, e precisa conter um @.");
             }
 
             if(!new EmailAddressAttribute().IsValid(email))
             {
-                throw new Exception("Email inválido.");
+                throw new ArgumentException("Email inválido.");
             }
              if (cpf.Length != 11 || !long.TryParse(cpf, out _))
             {
-                throw new Exception("CPF deve conter exatamente 11 dígitos numéricos.");
+                throw new ArgumentException("CPF deve conter exatamente 11 dígitos numéricos.");
             }
             if (string.IsNullOrWhiteSpace(nome) || nome.Length < 3)
             {

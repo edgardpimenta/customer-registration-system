@@ -20,11 +20,13 @@ namespace CadastrodeClientes.Entities
         public TipoDeCliente TipoDeCliente { get; set; } = TipoDeCliente.PessoaFisica; // Aplicando o Enum TipoDeCliente para indicar o tipo de cliente (Pessoa Física ou Pessoa Jurídica)
 
         //Definindo o construtor RazaoSocial para a classe Empresa.
-        public Empresa(string razaoSocial)
-        {
-            RazaoSocial = razaoSocial;
-        }
         public Empresa() { }
+        public Empresa(string razaoSocial, string Cnpj)
+        {
+            this.RazaoSocial = razaoSocial;
+            this.Cnpj = Cnpj;
+        }
+       
         #endregion
 
     }
