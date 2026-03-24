@@ -13,9 +13,9 @@ namespace CadastrodeClientes.Validations
         {
 
 
-            if (string.IsNullOrWhiteSpace(cpf))
+            if (string.IsNullOrWhiteSpace(cpf) || cpf.Length < 11)
             {
-                throw new Exception("CPF não pode ser nulo.");
+                throw new Exception("CPF não pode ser nulo, e não pode ser maior que 11 digitos.");
             }
 
             if (string.IsNullOrWhiteSpace(email))
@@ -35,6 +35,8 @@ namespace CadastrodeClientes.Validations
             {
                 throw new ArgumentException("O nome deve ter pelo menos 3 letras válidas.");
             }
+
+           
         }
     }
 }
