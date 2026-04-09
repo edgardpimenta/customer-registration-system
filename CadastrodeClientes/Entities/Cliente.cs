@@ -14,8 +14,8 @@ namespace CadastrodeClientes.Entities
         #region Propriedades
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Nome { get; private set; } = string.Empty;
-        public string Cpf { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty; 
+        public string Cpf { get; private set; } = string.Empty;
+        public string Email { get; private set; } = string.Empty; 
         public DateOnly DataCadastro { get; set; }
 
         public Guid EmpresaId { get; set; } // Chave estrangeira para a empresa associada ao cliente
@@ -27,6 +27,8 @@ namespace CadastrodeClientes.Entities
         /// </summary>
         public StatusDoCliente Status { get; set; } = StatusDoCliente.Ativo;
         public TipoDeCliente TipoDeCliente { get; set; }
+
+
         /// <summary>
         /// Regra de Negocio da Domain Cliente.
         /// </summary>
@@ -48,11 +50,24 @@ namespace CadastrodeClientes.Entities
         }
 
 
+
         //Construtores para as propriedades de Cliente (encapsulamento seguro)
-        public Cliente() { }
-        public Cliente (string Nome)
+        
+        public Cliente (string Nome, string Email, string Cpf)
             {
+            if (string.IsNullOrWhiteSpace(Nome) || Nome.Length < 3)
+            {
+                throw new ArgumentException("O nome deve ter pelo menos 3 letras válidas.");
+
+            }
+            if (string.IsNullOrWhiteSpace(Nome))
+
+                throw new ArgumentException("Nome invalido.");
             this.Nome = Nome;
+            this.Email = Email;
+            this.Cpf = Cpf;
+            
+            
         }
         }
     }
