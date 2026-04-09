@@ -1,9 +1,3 @@
-﻿using System;
+﻿using CadastrodeClientes.Controllers;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        
-    }
-}
+ClienteController.GerenciarProdutos();
