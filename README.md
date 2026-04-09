@@ -18,6 +18,8 @@ Primeira versão funcional do sistema, com foco em fundamentos.
 
 Objetivo: consolidar fundamentos de C# e manipulação de dados.
 
+Status: ✅ Finalizado 
+
 ---
 
 🟡 v2 — Modelagem de Domínio + Relacionamentos
@@ -31,6 +33,8 @@ Evolução para uma estrutura mais próxima de sistemas reais.
 ✔ Início da camada de validações  
 
 Objetivo: aplicar conceitos de modelagem de domínio e organização de código.
+
+Status: 🚧 Em desenvolvimento
 
 ---
 
