@@ -14,10 +14,14 @@ namespace CadastrodeClientes.Entities
         public string Cnpj { get; private set; } = string.Empty;
         public List<Cliente> Clientes { get; set; } = new List<Cliente>(); // Propriedade de navegação para os clientes associados à empresa
 
+
+
         /// <summary>
         /// Aplicando enum do TipoDeCliente para indicar o tipo de cliente (Pessoa Física ou Pessoa Jurídica) associado à empresa
         /// </summary>
         public TipoDeCliente TipoDeCliente { get; set; } = TipoDeCliente.PessoaFisica; // Aplicando o Enum TipoDeCliente para indicar o tipo de cliente (Pessoa Física ou Pessoa Jurídica)
+
+
 
         //Definindo o construtor RazaoSocial para a classe Empresa.
         public Empresa() { }
