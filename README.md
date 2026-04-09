@@ -1,88 +1,77 @@
-## 📈 Project Evolution
+📈 Project Evolution
 
-Este projeto foi criado com o objetivo de praticar e consolidar conhecimentos em **desenvolvimento backend com C# e .NET**.
-O sistema está sendo desenvolvido de forma **incremental**, onde cada versão adiciona novos conceitos e melhorias na arquitetura.
+Este projeto consiste em um sistema de gestão de clientes corporativos, desenvolvido com o objetivo de aplicar e evoluir conceitos de backend com C# e .NET, seguindo boas práticas de arquitetura e modelagem de domínio.
 
----
-
-### 🟢 v1 — Console Application + TXT Storage
-
-Primeira versão funcional do sistema de cadastro de clientes.
-
-**Principais características:**
-
-* Cadastro de clientes via aplicação **Console**
-* Captura de dados do usuário (`nome`, `email`, `telefone`)
-* Persistência de dados em arquivo `.txt`
-* Utilização de `StreamWriter` para gravação dos registros
-* Estrutura inicial do projeto com separação de responsabilidades:
-
-  * `Entities`
-  * `Repositories`
-
-Essa versão teve como objetivo praticar **fundamentos de C#**, manipulação de arquivos e organização básica de código.
+O sistema simula um cenário real onde uma empresa pode gerenciar múltiplos clientes, aplicando validações, regras de negócio e controle de dados.
 
 ---
 
-### 🟡 v2 — Modelagem de Domínio + Preparação para SQL *(Em desenvolvimento)*
+🟢 v1 — Console Application + TXT Storage
 
-Nesta etapa o projeto está sendo reestruturado para evoluir de um modelo simples para uma base mais próxima de sistemas reais.
+Primeira versão funcional do sistema, com foco em fundamentos.
 
-**O que já foi implementado:**
+✔ Cadastro de clientes via console  
+✔ Captura de dados (nome, email, telefone)  
+✔ Persistência em arquivo .txt  
+✔ Uso de StreamWriter  
+✔ Estrutura inicial com separação de responsabilidades  
 
-* Criação da entidade `Empresa`
-* Definição do relacionamento **1:N (Empresa → Clientes)**
-* Criação de **Enums** para controle de status e tipos
-* Implementação da camada de **Controllers**
-* Separação de responsabilidades no projeto:
-
-  * `Entities`
-  * `Controllers`
-  * `Validations`
-  * `Enums`
-* Início da camada de **Validações**
-* Estrutura preparada para futura integração com banco de dados
-
-**Objetivos da versão:**
-
-* Integrar com banco de dados SQL
-* Criar tabela `Clientes`
-* Implementar verificação de regras como **CPF único**
-* Persistir dados utilizando `SqlConnection` ou ORM futuramente
-
-Essa etapa introduz conceitos de **modelagem de domínio, organização de código e preparação para persistência em banco de dados**.
+Objetivo: consolidar fundamentos de C# e manipulação de dados.
 
 ---
 
-### 🔵 v3 — Validações e Regras de Negócio
+🟡 v2 — Modelagem de Domínio + Relacionamentos
 
-Foco em melhorar a **qualidade, consistência e regras do sistema**.
+Evolução para uma estrutura mais próxima de sistemas reais.
 
-**Melhorias planejadas:**
+✔ Criação da entidade Empresa  
+✔ Relacionamento 1:N (Empresa → Clientes)  
+✔ Uso de Enums (Status, Tipo de Cliente)  
+✔ Introdução da camada de Controllers  
+✔ Início da camada de validações  
 
-* Implementação completa da camada de **validações**
-* Validação de campos obrigatórios:
-
-  * Nome
-  * Email
-  * CPF
-* Implementação de **regras de negócio**, como:
-
-  * Cliente bloqueado não pode realizar ações
-* Melhor organização do código seguindo boas práticas
-* Separação clara entre **validação e regra de negócio**
-
-Essa fase reforça conceitos importantes de **arquitetura, domínio e manutenção de software**.
+Objetivo: aplicar conceitos de modelagem de domínio e organização de código.
 
 ---
 
-### 🚀 v4 — Próximos Passos
+🔵 v3 — Regras de Negócio e Validações
 
-Possíveis evoluções futuras do projeto:
+Foco em consistência e integridade dos dados.
 
-* Implementação de **CRUD completo de clientes**
-* Criação de um **menu interativo no console**
-* Transformação do projeto em uma **API REST com ASP.NET**
-* Aplicação de princípios **SOLID**
-* Integração com banco de dados utilizando ORM (Entity Framework)
-* Possível criação de uma **interface web**
+✔ Validação de CPF, Email e Nome  
+✔ Separação entre validação e regra de negócio  
+✔ Regras como:
+   - Cliente bloqueado não pode executar determinadas ações  
+
+Objetivo: garantir integridade e confiabilidade do sistema.
+
+---
+
+🟣 v4 — Persistência com Banco de Dados (Em breve)
+
+✔ Integração com SQL Server  
+✔ Implementação de repositórios  
+✔ Verificação de CPF único  
+✔ Uso de ORM (Entity Framework)
+
+---
+
+🚀 v5 — API REST (Planejado)
+
+✔ Transformação em API com ASP.NET Core  
+✔ Endpoints RESTful  
+✔ Autenticação e autorização (JWT)  
+✔ Aplicação de princípios SOLID  
+✔ Estrutura baseada em Clean Architecture  
+
+---
+
+🎯 Objetivo do Projeto
+
+Desenvolver um sistema evolutivo que simula um ambiente real de backend, consolidando conhecimentos em:
+
+- C#
+- .NET
+- Arquitetura de Software
+- Modelagem de Domínio
+- Boas práticas de desenvolvimento
